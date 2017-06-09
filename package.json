@@ -1,0 +1,21 @@
+{
+  "name": "qbeam",
+  "version": "0.0.1",
+  "description": "An app for sharing files using WebRTC",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/server.js",
+    "production": "node ./bin/server.js"
+  },
+  "author": "spoony_loony",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consolidate": "^0.14.5",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "mustache": "^2.3.0",
+    "serve-favicon": "^2.4.3"
+  }
+}

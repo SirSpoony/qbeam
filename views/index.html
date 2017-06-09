@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>qBeam.io</title>
+
+    <link rel="icon" href="/favicon.ico?v=2">
+
+    <script src="/scripts/lib/peer.js"></script>
+    <script src="/scripts/lib/jquery-3.2.1.js"></script>
+    <script src="/scripts/lib/bootstrap.js"></script>
+    <script src="/scripts/lib/bootstrap-filestyle.js"></script>
+
+    <script src="/scripts/main.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/lib/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500|Titillium+Web:700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="vertical-center">
+            <div>
+
+                <h1 class="text-center">qBeam.io</h1>
+                <br />
+                <br />
+
+                <div class="set-name">
+                    <p class="important">Give yourself a name, so your files can find you.</p>
+                    <br />
+                    <form id="name-form">
+                        <div class="form-group">
+                            <input class="form-control" id="name-field" type="text" placeholder="name - leave blank for random" />
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-default" id="submit-button" type="submit" value="Submit" disabled="disabled" />
+                            <span id="name-field-help" class="help-block">Please wait while a connection is established...</span>
+                        </div>
+                    </form>
+
+                    <br />
+                    <br />
+
+                    <p class="qbeam-info-title text-center">
+                        <b>What is this?</b>
+                    </p>
+                    <p class="qbeam-info">
+                        The purpose of qBeam.io is simple: Sending files from one computer to another.
+                        You don't need a USB drive, or a fancy program.
+                        Just open qBeam.io on both computers, and you are good to go.
+                    </p>
+
+                </div>
+
+                <div class="send-or-receive" style="display: none;">
+                    <p class="important">You are now receiving files at <code class="name"><span id="verified-username"></span></code>.</p>
+                    <p class="text-muted">
+                        Just wait here, and we will tell you when a file is sent to you.
+                    </p>
+                    <br />
+
+                    <h3>Send File</h3>
+                    <form id="send-file-form">
+                        <div class="form-group">
+                            <input class="form-control" id="destination-field" type="text" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <input class="filestyle" data-icon="true" id="file-field" type="file" />
+                        </div>
+                        <input class="btn btn-default" id="file-submit-button" type="submit" value="Send" />
+                    </form>
+
+                    <br />
+                </div>
+            </div>
+
+            <!-- Receive File Modal -->
+            <div class="modal fade" id="receive-file-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Receive File</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                <b><span id="sender-peer-name">Someone</span></b> is sending you <b><span id="sender-filename">a file</span></b>.
+                            </p>
+                            <p>
+                                Would you like to accept it?
+                            </p>
+                            <p id="file-received">
+
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Decline</button>
+                            <button id="accept-file-button" type="button" class="btn btn-primary">Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted text-center">Made by @spoony_loony</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
