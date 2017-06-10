@@ -1,10 +1,11 @@
 adjectives = [
     'Blue',
-    'Yellow',
+    'Red',
+    'Green',
     'Ugly',
-    'Superstitious',
-    'Fascinating',
-    'Temporary'
+    'Neat',
+    'Old',
+    'Great'
 ]
 
 things = [
@@ -12,7 +13,10 @@ things = [
     'Light',
     'Bottle',
     'Zombie',
-    'Comrad'
+    'Comrad',
+    'Chair',
+    'Lion',
+    'Beast'
 ]
 
 module.exports = {
